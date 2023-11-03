@@ -1,0 +1,10 @@
+import pandas as pd
+df = pd.read_csv('../data/gwas_pheno_small_spleen.csv')
+covar_df = pd.read_csv('/medpop/esp2/btruong/Projects/HDP/data/preec_UKB_2.txt')
+covar_df = covar_df.drop('preec', axis = 1)
+print(df.shape)
+print(covar_df.shape)
+new_df = pd.merge(df, covar_df, by = ['FID', 'IID'], how = 'inner')
+print(new_df.shape)
+print(new_df.columns)
+new_df.to_csv('../data/small_spleen_UKB.txt', index = None)

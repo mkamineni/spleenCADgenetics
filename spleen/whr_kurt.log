@@ -1,0 +1,65 @@
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 1.0.1
+* (C) 2014-2019 Brendan Bulik-Sullivan and Hilary Finucane
+* Broad Institute of MIT and Harvard / MIT Department of Mathematics
+* GNU General Public License v3
+*********************************************************************
+Call: 
+./ldsc.py \
+--out whr_kurt \
+--rg data/whr.sumstats.gz,data/kurtosis.sumstats.gz \
+--w-ld data/UKBB.ALL.ldscore/UKBB.EUR.rsid \
+--ref-ld data/UKBB.ALL.ldscore/UKBB.EUR.rsid 
+
+Beginning analysis at Fri Sep  8 16:33:42 2023
+Reading summary statistics from data/whr.sumstats.gz ...
+Read summary statistics for 1080834 SNPs.
+Reading reference panel LD Score from data/UKBB.ALL.ldscore/UKBB.EUR.rsid ... (ldscore_fromlist)
+Read reference panel LD Scores for 1094844 SNPs.
+Removing partitioned LD Scores with zero variance.
+Reading regression weight LD Score from data/UKBB.ALL.ldscore/UKBB.EUR.rsid ... (ldscore_fromlist)
+Read regression weight LD Scores for 1094844 SNPs.
+After merging with reference panel LD, 993108 SNPs remain.
+After merging with regression SNP LD, 993108 SNPs remain.
+Computing rg for phenotype 2/2
+Reading summary statistics from data/kurtosis.sumstats.gz ...
+Read summary statistics for 1217311 SNPs.
+After merging with summary statistics, 993108 SNPs remain.
+993088 SNPs with valid alleles.
+
+Heritability of phenotype 1
+---------------------------
+Total Observed scale h2: 0.1166 (0.0092)
+Lambda GC: 1.8204
+Mean Chi^2: 2.6102
+Intercept: 1.2189 (0.0576)
+Ratio: 0.1359 (0.0358)
+
+Heritability of phenotype 2/2
+-----------------------------
+Total Observed scale h2: 0.1183 (0.0149)
+Lambda GC: 1.0926
+Mean Chi^2: 1.1206
+Intercept: 1.0199 (0.0078)
+Ratio: 0.1651 (0.0648)
+
+Genetic Covariance
+------------------
+Total Observed scale gencov: 0.0303 (0.005)
+Mean z1*z2: 0.1291
+Intercept: 0.0322 (0.0089)
+
+Genetic Correlation
+-------------------
+Genetic Correlation: 0.2583 (0.0427)
+Z-score: 6.0504
+P: 1.4449e-09
+
+
+Summary of Genetic Correlation Results
+p1                         p2      rg      se       z           p  h2_obs  h2_obs_se  h2_int  h2_int_se  gcov_int  gcov_int_se
+data/whr.sumstats.gz  data/kurtosis.sumstats.gz  0.2583  0.0427  6.0504  1.4449e-09  0.1183     0.0149  1.0199     0.0078    0.0322       0.0089
+
+Analysis finished at Fri Sep  8 16:35:13 2023
+Total time elapsed: 1.0m:31.58s

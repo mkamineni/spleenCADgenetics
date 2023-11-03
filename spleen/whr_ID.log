@@ -1,0 +1,65 @@
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 1.0.1
+* (C) 2014-2019 Brendan Bulik-Sullivan and Hilary Finucane
+* Broad Institute of MIT and Harvard / MIT Department of Mathematics
+* GNU General Public License v3
+*********************************************************************
+Call: 
+./ldsc.py \
+--out whr_ID \
+--rg data/whr.sumstats.gz,data/grayinversediff.sumstats.gz \
+--w-ld data/UKBB.ALL.ldscore/UKBB.EUR.rsid \
+--ref-ld data/UKBB.ALL.ldscore/UKBB.EUR.rsid 
+
+Beginning analysis at Fri Sep  8 16:33:34 2023
+Reading summary statistics from data/whr.sumstats.gz ...
+Read summary statistics for 1080834 SNPs.
+Reading reference panel LD Score from data/UKBB.ALL.ldscore/UKBB.EUR.rsid ... (ldscore_fromlist)
+Read reference panel LD Scores for 1094844 SNPs.
+Removing partitioned LD Scores with zero variance.
+Reading regression weight LD Score from data/UKBB.ALL.ldscore/UKBB.EUR.rsid ... (ldscore_fromlist)
+Read regression weight LD Scores for 1094844 SNPs.
+After merging with reference panel LD, 993108 SNPs remain.
+After merging with regression SNP LD, 993108 SNPs remain.
+Computing rg for phenotype 2/2
+Reading summary statistics from data/grayinversediff.sumstats.gz ...
+Read summary statistics for 1217311 SNPs.
+After merging with summary statistics, 993108 SNPs remain.
+993088 SNPs with valid alleles.
+
+Heritability of phenotype 1
+---------------------------
+Total Observed scale h2: 0.1166 (0.0092)
+Lambda GC: 1.8204
+Mean Chi^2: 2.6102
+Intercept: 1.2189 (0.0576)
+Ratio: 0.1359 (0.0358)
+
+Heritability of phenotype 2/2
+-----------------------------
+Total Observed scale h2: 0.1465 (0.0147)
+Lambda GC: 1.1238
+Mean Chi^2: 1.1558
+Intercept: 1.0317 (0.008)
+Ratio: 0.2032 (0.0513)
+
+Genetic Covariance
+------------------
+Total Observed scale gencov: 0.0414 (0.0051)
+Mean z1*z2: 0.1941
+Intercept: 0.0583 (0.0097)
+
+Genetic Correlation
+-------------------
+Genetic Correlation: 0.3165 (0.0361)
+Z-score: 8.7579
+P: 1.9885e-18
+
+
+Summary of Genetic Correlation Results
+p1                                p2      rg      se       z           p  h2_obs  h2_obs_se  h2_int  h2_int_se  gcov_int  gcov_int_se
+data/whr.sumstats.gz  data/grayinversediff.sumstats.gz  0.3165  0.0361  8.7579  1.9885e-18  0.1465     0.0147  1.0317      0.008    0.0583       0.0097
+
+Analysis finished at Fri Sep  8 16:35:03 2023
+Total time elapsed: 1.0m:28.23s

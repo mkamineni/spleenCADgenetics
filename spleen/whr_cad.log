@@ -1,0 +1,65 @@
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 1.0.1
+* (C) 2014-2019 Brendan Bulik-Sullivan and Hilary Finucane
+* Broad Institute of MIT and Harvard / MIT Department of Mathematics
+* GNU General Public License v3
+*********************************************************************
+Call: 
+./ldsc.py \
+--out whr_cad \
+--rg data/whr.sumstats.gz,data/cad.sumstats.gz \
+--w-ld data/UKBB.ALL.ldscore/UKBB.EUR.rsid \
+--ref-ld data/UKBB.ALL.ldscore/UKBB.EUR.rsid 
+
+Beginning analysis at Fri Sep  8 16:28:44 2023
+Reading summary statistics from data/whr.sumstats.gz ...
+Read summary statistics for 1080834 SNPs.
+Reading reference panel LD Score from data/UKBB.ALL.ldscore/UKBB.EUR.rsid ... (ldscore_fromlist)
+Read reference panel LD Scores for 1094844 SNPs.
+Removing partitioned LD Scores with zero variance.
+Reading regression weight LD Score from data/UKBB.ALL.ldscore/UKBB.EUR.rsid ... (ldscore_fromlist)
+Read regression weight LD Scores for 1094844 SNPs.
+After merging with reference panel LD, 993108 SNPs remain.
+After merging with regression SNP LD, 993108 SNPs remain.
+Computing rg for phenotype 2/2
+Reading summary statistics from data/cad.sumstats.gz ...
+Read summary statistics for 1217311 SNPs.
+After merging with summary statistics, 993108 SNPs remain.
+496163 SNPs with valid alleles.
+
+Heritability of phenotype 1
+---------------------------
+Total Observed scale h2: 0.1168 (0.0093)
+Lambda GC: 1.8244
+Mean Chi^2: 2.6184
+Intercept: 1.2274 (0.0567)
+Ratio: 0.1405 (0.035)
+
+Heritability of phenotype 2/2
+-----------------------------
+Total Observed scale h2: 0.0706 (0.007)
+Lambda GC: 1.4104
+Mean Chi^2: 1.7679
+Intercept: 1.0453 (0.0255)
+Ratio: 0.059 (0.0331)
+
+Genetic Covariance
+------------------
+Total Observed scale gencov: 0.0178 (0.0027)
+Mean z1*z2: 0.2386
+Intercept: 0.0523 (0.0157)
+
+Genetic Correlation
+-------------------
+Genetic Correlation: 0.1965 (0.0241)
+Z-score: 8.1458
+P: 3.7691e-16
+
+
+Summary of Genetic Correlation Results
+p1                    p2      rg      se       z           p  h2_obs  h2_obs_se  h2_int  h2_int_se  gcov_int  gcov_int_se
+data/whr.sumstats.gz  data/cad.sumstats.gz  0.1965  0.0241  8.1458  3.7691e-16  0.0706      0.007  1.0453     0.0255    0.0523       0.0157
+
+Analysis finished at Fri Sep  8 16:30:10 2023
+Total time elapsed: 1.0m:26.14s
