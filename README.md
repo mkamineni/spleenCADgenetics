@@ -15,7 +15,6 @@ Emerging evidence suggests that the spleen plays an important role in inflammato
 ## Related Repositories
 This repository is part of the Spleen Radiomics and Coronary Artery Disease project.
 
-## Related repositories
 - **spleenCADimaging**
 - **spleenResults Analysis**
 - **spleen_replication**
